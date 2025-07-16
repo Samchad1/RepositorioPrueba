@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando...</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        window.location.href = 'home.html';
+      }, 3500);
+    });
+  </script>
+</head>
+<body class="loading-page">
+  <div class="loader-container">
+    <div class="loader-path">
+      <img src="../images/logo.png" alt="Logo de Pls Donate" class="loader-logo">
+    </div>
+    <p class="loading-text">Cargando...</p>
+  </div>
+</body>
+</html>
