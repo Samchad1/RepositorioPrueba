@@ -81,7 +81,7 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s var(--ease-snappy), transform 0.2s var(--ease-snappy);
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -97,11 +97,10 @@ body {
   padding: 2rem;
 }
 .home .content-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 20px;
   padding: 2rem 0;
 }
 .home .info-box {
@@ -178,7 +177,7 @@ body {
   border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s var(--ease-snappy), transform 0.2s var(--ease-snappy);
 }
 
 .cta-button:hover {
@@ -193,15 +192,10 @@ body {
 
 .home .content-section {
   background-color: var(--light-cream);
-  padding: 4rem 20px;  
-  width: 100%;  
-  height: auto;
-  box-sizing: border-box; 
+  padding: 4rem 20px;
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
 }
 
 .home .footer {
@@ -336,7 +330,7 @@ body {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s var(--ease-snappy), box-shadow 0.3s var(--ease-snappy);
   width: 100%;
 }
 .submit-btn:hover {
@@ -361,6 +355,37 @@ body {
   animation: zoomIn 0.8s ease-out both;
 }
 
+/* Loader */
+.loader-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--background);
+}
+
+.loader-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+.loader-path {
+  position: absolute;
+  inset: 0;
+  border: 2px dashed var(--light-blue);
+  offset-path: path('M10,80 C40,10 65,10 95,80 S150,150 180,80');
+}
+
+.path-loader {
+  width: 20px;
+  height: 20px;
+  background: var(--mid-blue);
+  border-radius: 50%;
+  offset-path: path('M10,80 C40,10 65,10 95,80 S150,150 180,80');
+  animation: loader-move 3s var(--ease-snappy) infinite;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -381,6 +406,10 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
+@keyframes loader-move {
+  to { offset-distance: 100%; }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .home .grid-container {
@@ -388,5 +417,24 @@ body {
   }
   .home .content-section {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .nav-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .home .content-section {
+    grid-template-columns: 1fr 1fr;
   }
 }
