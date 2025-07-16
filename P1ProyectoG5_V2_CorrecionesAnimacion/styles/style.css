@@ -81,7 +81,7 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s var(--ease-snappy), transform 0.2s var(--ease-snappy);
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -132,7 +132,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 2rem 0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s var(--ease-snappy);
   width: 100%;
 }
 
@@ -154,7 +154,7 @@ body {
   border-radius: 8px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s var(--ease-snappy), transform 0.2s var(--ease-snappy);
 }
 
 .cta-button:hover {
@@ -254,7 +254,7 @@ body {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s var(--ease-snappy), box-shadow 0.2s var(--ease-snappy);
 }
 .support-item:hover {
   transform: translateY(-5px);
@@ -280,7 +280,7 @@ body {
   padding: 0 5px;
   font-size: 14px;
   color: #2c3e50;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--ease-snappy);
 }
 .form-group input,
 .form-group select,
@@ -291,7 +291,7 @@ body {
   border-radius: 8px;
   font-size: 16px;
   background: #ffffff;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s var(--ease-snappy);
 }
 .form-group input:focus,
 .form-group select:focus,
@@ -311,7 +311,7 @@ body {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s var(--ease-snappy), box-shadow 0.3s var(--ease-snappy);
   width: 100%;
 }
 .submit-btn:hover {
