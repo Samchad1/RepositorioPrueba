@@ -6,19 +6,21 @@
   <title>Pls Donate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Pls Donate es una plataforma que conecta donantes con causas sociales, de salud y protección animal en América Latina.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="home">
+<body class="home fade-in">
   <header class="header">
     <div class="container">
       <h1 class="header-title">Bienvenido a Pls Donate</h1>
-      <img src="../images/salud.jpeg" alt="Logo de Pls Donate" class="logo">
+      <img src="../images/logo.png" alt="Logo de Pls Donate" class="logo">
       <nav class="navigation">
         <div class="button-container">
           <button class="nav-button" onclick="location.href='../pages/cause_social.html'">Causas Sociales</button>
           <button class="nav-button" onclick="location.href='../pages/cause_health.html'">Salud y Bienestar</button>
           <button class="nav-button" onclick="location.href='../pages/cause_animal.html'">Protección Animal</button>
+          <button class="nav-button" onclick="location.href='../pages/apply.html'">Solicitar Ayuda</button>
         </div>
       </nav>
     </div>
@@ -32,7 +34,7 @@
         <p>Pls Donate conecta a donantes con organizaciones que necesitan apoyo urgente, promoviendo la transparencia y el impacto social.</p>
       </div>
       <div class="content-image">
-        <img src="../images/dona.jpg" alt="Voluntarios entregando alimentos a personas necesitadas">
+        <img src="../images/dona.jpg" alt="Voluntarios entregando donaciones para animales rescatados">
       </div>
     </section>
 
@@ -43,7 +45,7 @@
         <p>Conectar de forma eficiente a quienes desean ayudar con quienes más lo necesitan, facilitando donaciones seguras y responsables.</p>
       </div>
       <div class="content-image">
-        <img src="../images/dona1.jpg" alt="Voluntario ayudando a una familia">
+        <img src="../images/dona1.jpg" alt="Rescate animal financiado por donaciones solidarias">
       </div>
     </section>
 
@@ -54,14 +56,21 @@
         <p>Ser la plataforma de referencia en donaciones en América Latina, promoviendo una cultura de solidaridad y responsabilidad social.</p>
       </div>
       <div class="content-image">
-        <img src="../images/dona3.jpg" alt="Personas colaborando en una causa social">
+        <img src="../images/dona3.jpg" alt="Equipo cuidando animales vulnerables gracias a tus donaciones">
       </div>
     </section>
 
     <!-- Llamado a la acción -->
     <section class="cta">
       <h2>Haz la diferencia hoy</h2>
-      <p>Tu donación puede cambiar vidas. ¡Únete a nuestra causa!</p>
+      <p>Tu apoyo permite rescatar y proteger animales en situación de riesgo.</p>
+      <button class="cta-button" onclick="location.href='../pages/cause_animal.html'">Apoya a los Animales</button>
+    </section>
+
+    <section class="apply-section">
+      <h2>¿Necesitas una donación?</h2>
+      <p>Si eres una organización o persona que requiere apoyo, completa nuestra solicitud en línea.</p>
+      <button class="cta-button" onclick="location.href='../pages/apply.html'">Solicitar Donación</button>
     </section>
   </main>
 
