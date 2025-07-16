@@ -1,7 +1,7 @@
 
 
 <?php
-$content = file_get_contents("pages/home.html");
+$content = file_get_contents("pages/loading.html");
 echo $content;
 ?>
 
