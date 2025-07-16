@@ -1,0 +1,70 @@
+:root {
+  --dark-blue: #213448;
+  --mid-blue: #547792;
+  --light-blue: #94B4C1;
+  --background: #ECEFCA;
+}
+
+body.loader-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.logo-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border: 3px dashed var(--light-blue);
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.1) rotate(5deg);
+  transition: transform 0.6s cubic-bezier(.55, .06, .53, .95);
+}
+
+.loader-logo {
+  width: 150px;
+  height: auto;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background: var(--mid-blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px; /* center using half size */
+  offset-path: path("M 0 -60 A 60 60 0 1 1 0 60 A 60 60 0 1 1 0 -60");
+  offset-rotate: auto;
+  animation: move 4s cubic-bezier(.55, .06, .53, .95) infinite;
+}
+
+@keyframes move {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
