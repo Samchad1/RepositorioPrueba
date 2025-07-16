@@ -136,6 +136,27 @@ body {
   width: 100%;
 }
 
+.apply-section {
+  background: #94b4c1;
+  color: #213448;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.apply-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.apply-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
 .home .cta h2 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
@@ -200,7 +221,8 @@ body {
 /* PÁGINAS DE CAUSAS */
 .cause-social .grid-container,
 .protection-animal .grid-container,
-.cause-health .grid-container {
+.cause-health .grid-container,
+.apply .grid-container {
   display: grid;
   grid-template-areas:
     "a a"
