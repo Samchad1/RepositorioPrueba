@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protección Animal</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body class="protection-animal">
+  <div class="grid-container">
+    <header id="A" class="area-a">
+      <img src="../images/logo.png" alt="Logo" class="logo" />
+      <nav class="navigation">
+        <div class="button-container">
+          <button class="nav-button" onclick="location.href='../pages/home.html'">Inicio</button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="B1" class="area-b1">
+      <h1>Protección Animal</h1>
+    </section>
+
+    <section id="C1" class="area-c1">
+      <div class="card">
+        <h2>¿Por qué apoyar la protección animal?</h2>
+        <p>
+          El bienestar animal es fundamental para la conservación de la biodiversidad. Con tu apoyo, podemos rescatar animales maltratados y promover su bienestar a través de campañas de concientización y acciones directas.
+        </p>
+      </div>
+    </section>
+
+    <section id="C2" class="area-c2">
+      <h2>Formas de Apoyar</h2>
+      <div class="support-options">
+        <div class="support-item">
+          <h3>Adopción Responsable</h3>
+          <p>Apoya la adopción responsable de animales rescatados, dándoles un hogar digno.</p>
+        </div>
+        <div class="support-item">
+          <h3>Educación y Concientización</h3>
+          <p>Colabora en la difusión de programas educativos sobre el trato digno a los animales.</p>
+        </div>
+        <div class="support-item">
+          <h3>Campañas de Rescate</h3>
+          <p>Contribuye a los esfuerzos de rescate de animales maltratados o abandonados.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="C3" class="area-c3">
+      <h2>Formulario de Donación</h2>
+      <form class="donation-form" onsubmit="alert('¡Gracias por tu donación! Nos pondremos en contacto contigo pronto.'); return false;">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha de Donación</label>
+          <input type="date" id="fecha" name="fecha" required min="2025-06-03" />
+        </div>
+        <div class="form-group">
+          <label for="monto">Monto de la donación</label>
+          <input type="number" id="monto" name="monto" placeholder="Ingresa el monto de tu donación" required min="1" />
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de donación</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="dinero">Dinero</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="tiempo">Tiempo (Voluntariado)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje personal (opcional)</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe un mensaje si lo deseas"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar donación</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

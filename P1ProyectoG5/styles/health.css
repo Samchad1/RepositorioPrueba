@@ -1,0 +1,288 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --dark-blue: #213448;
+  --mid-blue: #547792;
+  --light-blue: #94B4C1;
+  --light-cream: #ECEFCA;
+  --text-color: #213448;
+  --background: #ECEFCA;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Grid Principal */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "A"
+    "B1"
+    "C1";
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Header (área A) */
+.area-a {
+  grid-area: A;
+  background-color: var(--dark-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+/* Área B1 (título principal) */
+.area-b1 {
+  grid-area: B1;
+  text-align: center;
+}
+
+.area-b1 h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: var(--dark-blue);
+}
+
+/* Área C1 (contenedor para la card) */
+.area-c1 {
+  grid-area: C1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border: 2px solid var(--light-blue);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  color: var(--mid-blue);
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Logo */
+.logo {
+  height: 70px;
+  border-radius: 5px;
+}
+
+/* Botones */
+nav button {
+  background-color: var(--mid-blue);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: var(--light-blue);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b1 b1"
+    "c1 c1"
+    "c2 c2";
+  gap: 10px;
+  padding: 10px;
+}
+
+.area-a { grid-area: a; }
+.area-b1 { grid-area: b1; }
+.area-c1 { grid-area: c1; }
+.area-c2 { grid-area: c2; }
+
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.flowchart {
+  position: relative;
+  padding: 20px;
+}
+
+.node {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo general del contenedor */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b1 b1"
+    "c1 c1"
+    "c2 c2"
+    "c3 c3";
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Áreas del grid */
+.area-a { grid-area: a; }
+.area-b1 { grid-area: b1; text-align: center; }
+.area-c1 { grid-area: c1; }
+.area-c2 { grid-area: c2; }
+.area-c3 { grid-area: c3; }
+
+/* Estilo de la tarjeta */
+.card {
+  background: #f4f4f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo de la sección de opciones de apoyo */
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo de cada item de apoyo */
+.support-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.support-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.support-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo del formulario de donación */
+.donation-form {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.donation-form button {
+  background: #2c3e50;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.donation-form button:hover {
+  background: #34495e;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .support-options {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-form {
+    padding: 20px;
+  }
+}

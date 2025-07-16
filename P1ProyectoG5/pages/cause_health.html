@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salud y Bienestar</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body class="cause-health fade-in">
+  <div class="grid-container">
+    <header id="A" class="area-a">
+      <img src="../images/logo.png" alt="Logo" class="logo" />
+      <nav class="navigation">
+        <div class="button-container">
+          <button class="nav-button" onclick="location.href='../pages/home.html'">Inicio</button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="B1" class="area-b1">
+      <h1>Salud y Bienestar</h1>
+    </section>
+
+    <section id="C1" class="area-c1 slide-in-left">
+      <div class="card">
+        <h2>¿Por qué apoyar la salud?</h2>
+        <p>
+          Millones de personas no tienen acceso a servicios de salud básicos. A través de tus donaciones, puedes ayudar a mejorar vidas, proveer medicamentos y apoyar clínicas locales.
+        </p>
+      </div>
+    </section>
+
+    <section id="C2" class="area-c2 slide-in-right">
+      <h2>Formas de Apoyar la Salud y el Bienestar</h2>
+      <div class="support-options">
+        <div class="support-item"><h3>Salud y Bienestar</h3><p>Apoya iniciativas generales para mejorar la salud y el bienestar de comunidades vulnerables.</p></div>
+        <div class="support-item"><h3>Tratamiento Médico para Personas de Bajos Recursos</h3><p>Contribuye a que personas de bajos recursos accedan a tratamientos médicos esenciales.</p></div>
+        <div class="support-item"><h3>Salud Mental y Prevención del Suicidio</h3><p>Colabora en programas de salud mental y prevención del suicidio para quienes lo necesitan.</p></div>
+        <div class="support-item"><h3>Hacer Donación Anónima</h3><p>Realiza una donación anónima para apoyar diferentes causas de salud.</p></div>
+        <div class="support-item"><h3>Llenar Formulario para Aplicar</h3><p>Regístrate y aplica para participar en programas de apoyo a la salud.</p></div>
+        <div class="support-item"><h3>Donar Dinero, Sangre o Medicamentos</h3><p>Contribuye con donaciones de dinero, sangre o medicamentos para ayudar directamente.</p></div>
+        <div class="support-item"><h3>Donar Dinero o Tiempo (Voluntariado)</h3><p>Ofrece tu tiempo como voluntario o dona dinero para apoyar iniciativas de salud.</p></div>
+      </div>
+    </section>
+
+    <section id="C3" class="area-c3 zoom-in">
+      <h2>Formulario de Donación</h2>
+      <form class="donation-form" onsubmit="alert('¡Gracias por tu donación! Nos pondremos en contacto contigo pronto.'); return false;">
+        <div class="form-group">
+          <label for="nombre">Nombre (dejar en blanco para donación anónima)</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre (opcional)" />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha de Donación</label>
+          <input type="date" id="fecha" name="fecha" required min="2025-06-03" />
+        </div>
+        <div class="form-group">
+          <label for="tipo-donacion">Tipo de Donación</label>
+          <select id="tipo-donacion" name="tipo-donacion" required>
+            <option value="">Selecciona una opción</option>
+            <option value="dinero">Dinero</option>
+            <option value="sangre">Sangre</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="tiempo">Tiempo (Voluntariado)</option>
+          </select>
+        </div>
+        <div class="form-group" id="cantidad-group">
+          <label for="cantidad">Cantidad (si aplica)</label>
+          <input type="text" id="cantidad" name="cantidad" placeholder="Ej: 100 USD, 1 litro, etc." required pattern="[0-9]+(\\s*[a-zA-Z]+)?" title="Ingresa un número seguido de una unidad si aplica (ej: 100 USD, 1 litro)" />
+        </div>
+        <div class="form-group">
+          <label for="comentarios">Comentarios Adicionales</label>
+          <textarea id="comentarios" name="comentarios" placeholder="Detalles adicionales (opcional)"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Donación</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
